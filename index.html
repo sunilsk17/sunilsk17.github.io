@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunil Kumar S | Portfolio</title>
+  <meta name="description" content="Portfolio of Sunil Kumar S — SDE at Walmart Global Tech, ML researcher." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ── LEFT SIDEBAR ── -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">SK</div>
+        <h1 class="name">Sunil Kumar S</h1>
+        <p class="role">SDE @ Walmart Global Tech</p>
+        <p class="sub">ML Research · BE CS · Chennai</p>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+        <a href="#leadership"><i class="fas fa-users"></i> Leadership</a>
+      </nav>
+
+      <div class="contact-block">
+        <a href="mailto:sunilkumarssk.2021@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i> sunilkumarssk.2021@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/sunilsk17" target="_blank" class="contact-link">
+          <i class="fab fa-linkedin"></i> linkedin.com/in/sunilsk17
+        </a>
+        <a href="https://github.com/sunilsk17" target="_blank" class="contact-link">
+          <i class="fab fa-github"></i> github.com/sunilsk17
+        </a>
+      </div>
+
+      <div class="skills-block">
+        <h3>Languages</h3>
+        <div class="tags">
+          <span>Python</span><span>C++</span><span>C</span>
+          <span>Java</span><span>JavaScript</span><span>SQL</span>
+          <span>HTML/CSS</span>
+        </div>
+
+        <h3>ML & Data</h3>
+        <div class="tags">
+          <span>PyTorch</span><span>MLX</span><span>Scikit-learn</span>
+          <span>NumPy</span><span>Pandas</span><span>NLTK</span>
+          <span>PySpark</span>
+        </div>
+
+        <h3>Cloud & Data Eng</h3>
+        <div class="tags">
+          <span>GCP</span><span>Databricks</span><span>BigQuery</span>
+          <span>Azure</span><span>Apache Airflow</span><span>Apache Spark</span>
+        </div>
+
+        <h3>Tools</h3>
+        <div class="tags">
+          <span>Git</span><span>Jupyter</span><span>Streamlit</span>
+          <span>Node.js</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main">
+
+      <!-- About -->
+      <section id="about" class="card">
+        <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+        <p>
+          I'm a software engineer at Walmart Global Tech working on Tier-0 payment reliability and agentic AI systems.
+          Outside of work, I do ML research — mostly on hallucination detection in vision-language models, hardware-aware graph neural networks on Apple Silicon, and streaming algorithm theory.
+        </p>
+        <p>
+          I graduated from College of Engineering Guindy (Anna University) with a BE in Computer Science (CGPA: 9.21).
+          I interned at Walmart during my final semester building data pipelines for Sam's Club, and joined full-time after graduating.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="card">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>Walmart Global Tech India</h3>
+                  <h4>Software Engineer II</h4>
+                </div>
+                <span class="date-tag">Jul 2025 – Present · Chennai</span>
+              </div>
+              <ul>
+                <li>Won the Walmart EBS Elevate Global GenAI Hackathon (IDC + US); leading end-to-end development and productionization of an agentic AI platform to improve associate productivity across enterprise teams.</li>
+                <li>Reliability operations for Walmart's Tier-0 payment ecosystem — on-call support, RCA, release management, and proactive reliability engineering for payment flows across Walmart US, Canada, and Mexico.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>Walmart Global Tech India</h3>
+                  <h4>SDE Intern</h4>
+                </div>
+                <span class="date-tag">Jan 2025 – Jun 2025 · Bangalore</span>
+              </div>
+              <ul>
+                <li>Led production cutover of Sam's Club membership data pipelines with zero downtime and full data integrity.</li>
+                <li>Built 4+ automated cross-platform backfill pipelines between GCP Databricks and BigQuery to recover missing records; integrated automated alerts and reporting.</li>
+                <li>Developed a missing data alert system to detect discrepancies between Bronze and Silver layers, enabling proactive resolution via automated team notifications.</li>
+                <li>Designed a reverse sync pipeline (GCP → Azure) using Apache Airflow and Spark — reduced sync time by 60% across 10+ high-volume tables.</li>
+                <li>Embedded data quality rules and version validation into Airflow DAGs across 10+ critical tables; created 13+ external tables in GCP Databricks avoiding duplication and cutting cloud costs.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="card">
+        <h2 class="section-title"><i class="fas fa-code"></i> Projects</h2>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>LatentTokenGuard</h3>
+              <a href="https://github.com/sunilsk17/LatentTokenGuard" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · PyTorch · LVLMs</p>
+            <ul>
+              <li>Post-hoc hallucination detection in large vision-language models without modifying the decoding loop.</li>
+              <li>Measures cosine similarity between generated token embeddings and visual patch representations in latent space — single-pass, no output distortion.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>mlx-spectral-gnn</h3>
+              <a href="https://github.com/sunilsk17/mlx-spectral-gnn" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · MLX · Apple Silicon</p>
+            <ul>
+              <li>Hardware-aware spectral graph sparsification for GNN training under memory constraints.</li>
+              <li>Prunes structurally redundant edges using spectral distances from the graph Laplacian instead of random DropEdge. Zero-copy CPU↔GPU via Apple Silicon unified memory — eliminates PCIe bottleneck.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>annealed-ewc-edge-cl</h3>
+              <a href="https://github.com/sunilsk17/annealed-ewc-edge-cl" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · PyTorch · Continual Learning</p>
+            <ul>
+              <li>Continual learning experiments on edge hardware (MobileNetV3, ResNet-18).</li>
+              <li>EWC λ-sweep across {0–5000}, annealed harmonic decay schedule, and LwF distillation baseline on sequential CIFAR-10 drift and class-incremental CIFAR-100.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Learning-Augmented MAXCUT Streaming</h3>
+              <a href="https://github.com/sunilsk17/Learning-Augmented-MAXCUT-Streaming" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · Streaming Algorithms · Theoretical CS</p>
+            <ul>
+              <li>Three streaming MAX-CUT algorithms using learned predictions: SAHO (two-tier hub/peripheral ML), ARSP (confidence ensemble + dynamic threshold), TCAO (community-prior).</li>
+              <li>Benchmarked on Enron mail graphs and Ottawa road networks.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Stream Order Sensitivity — Distinct Element Estimation</h3>
+              <a href="https://github.com/sunilsk17/Stream-Order-Sensitivity-in-Distinct-Element-Estimation" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · HyperLogLog · Probabilistic Algorithms</p>
+            <ul>
+              <li>Empirical study of how stream ordering affects HyperLogLog, Theta Sketch, and KMV across real-world datasets.</li>
+              <li>Key finding: HLL needs 53.8% more data to hit 5% error under natural (clustered) ordering on Enron. KMV shows the inverse — 20× faster under grouped ordering.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>GreenSketch</h3>
+              <a href="https://github.com/sunilsk17/GreenSketch" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · HyperLogLog · Edge Systems</p>
+            <ul>
+              <li>Energy-aware HLL variants (LHLL, THLL, AP-HLL) for distinct counting at the edge.</li>
+              <li>18.6% energy reduction on Wikipedia pageviews at &lt;1% accuracy loss.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Phishing Detection</h3>
+              <a href="https://github.com/sunilsk17/Phishing-Detection" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · VAE · ResNeXt-GRU</p>
+            <ul>
+              <li>Phishing URL classifier using Variational Autoencoder for data augmentation and ResNeXt-GRU architecture for classification on handcrafted URL features.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Social Media Sentiment Analysis</h3>
+              <a href="https://github.com/sunilsk17/Social_Media_Sentiment_Analysis" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Python · SVM · Bagging</p>
+            <ul>
+              <li>82% accuracy on Twitter Sentiment140 using Bagging with SVM and feature selection.</li>
+              <li>Outperforms logistic regression and naive Bayes baselines.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Hostel Management System</h3>
+              <a href="https://github.com/sunilsk17/Hostel-Management-System" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">ReactJS · Node.js · MySQL</p>
+            <ul>
+              <li>Full-stack hostel management system for student records, room assignments, attendance, and automated billing.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="card">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>College of Engineering Guindy, Anna University</h3>
+                  <h4>BE Computer Science and Engineering</h4>
+                </div>
+                <span class="date-tag">Oct 2021 – May 2025</span>
+              </div>
+              <p>CGPA: <strong>9.21 / 10</strong></p>
+              <p>Chairperson of CSEA, Treasurer at CEG Toastmasters, Head of Events at Computer Society of Anna University.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>Chennai Higher Secondary School, Velachery</h3>
+                  <h4>Grade 12</h4>
+                </div>
+                <span class="date-tag">Jun 2020 – May 2021</span>
+              </div>
+              <p>Score: <strong>93.6%</strong></p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section id="achievements" class="card">
+        <h2 class="section-title"><i class="fas fa-trophy"></i> Achievements</h2>
+        <ul class="achievement-list">
+          <li>
+            <span class="ach-badge">🥇</span>
+            <div>
+              <strong>Walmart EBS Elevate Global GenAI Hackathon</strong>
+              <p>Won the global GenAI hackathon across IDC + US teams at Walmart. Now leading productionization of the winning agentic AI platform.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">🥇</span>
+            <div>
+              <strong>First Place — Starlight Coding, March 2024</strong>
+              <p>All-night coding marathon at Abacus'24, a national inter-college symposium. 7 rounds: MCQ, coding with disturbances, reverse coding, quiz, math, blind coding, and code bidding.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">🥈</span>
+            <div>
+              <strong>Runner Up — OSPC, May 2023</strong>
+              <p>Onsite Programming Contest at Abacus'23, hosted by the CSE Association at CEG.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">🥉</span>
+            <div>
+              <strong>Third Place — Hogwarts Coding, April 2023</strong>
+              <p>Competitive coding event at International Techno-Management Fest Kurukshetra'23, organized by CEG Tech Forum.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Leadership -->
+      <section id="leadership" class="card">
+        <h2 class="section-title"><i class="fas fa-users"></i> Leadership</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>Computer Science and Engineering Association (CSEA)</h3>
+                  <h4>Chairperson</h4>
+                </div>
+                <span class="date-tag">Jul 2024 – Jun 2025</span>
+              </div>
+              <ul>
+                <li>Led 800+ students as head of the CSE department's official student body at CEG.</li>
+                <li>Organized HackZ'24, a 24-hour national hackathon with 3500+ participants.</li>
+                <li>Managed an 80+ member team across logistics, tech, content, and sponsorship; secured industry partnerships.</li>
+                <li>Orchestrated ABACUS'25 (national symposium), Freshers' Day, Alumni Meet, and Induction Program.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>CEG Toastmasters</h3>
+                  <h4>Treasurer & Vice President Membership</h4>
+                </div>
+                <span class="date-tag">Mar 2023 – Jun 2024</span>
+              </div>
+              <ul>
+                <li>Managed international payments to Toastmasters International via wire transfers.</li>
+                <li>Led member engagement initiatives and streamlined club operations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>Computer Society of Anna University</h3>
+                  <h4>Head of Events</h4>
+                </div>
+                <span class="date-tag">Sep 2023 – Aug 2024</span>
+              </div>
+              <ul>
+                <li>Conducted DSA and C++ programming classes for non-CS/IT students.</li>
+                <li>Organized technical events during intra-college symposiums.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Highlight active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+</body>
+</html>
