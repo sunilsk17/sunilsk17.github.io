@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunil Kumar S | Portfolio</title>
-  <meta name="description" content="Portfolio of Sunil Kumar S — SDE at Walmart Global Tech, ML researcher." />
+  <meta name="description" content="Portfolio of Sunil Kumar S — Software Engineer II at Walmart Global Tech; research on trustworthy, efficient ML and streaming algorithms." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -18,14 +18,15 @@
       <div class="profile">
         <div class="avatar">SK</div>
         <h1 class="name">Sunil Kumar S</h1>
-        <p class="role">SDE @ Walmart Global Tech</p>
-        <p class="sub">ML Research · BE CS · Chennai</p>
+        <p class="role">Software Engineer II @ Walmart Global Tech</p>
+        <p class="sub">ML Research · BE CSE, CEG · Chennai</p>
       </div>
 
       <nav class="nav-links">
         <a href="#about"><i class="fas fa-user"></i> About</a>
         <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-        <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+        <a href="#projects"><i class="fas fa-code"></i> Research &amp; Projects</a>
+        <a href="#publications"><i class="fas fa-book"></i> Publications</a>
         <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
         <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
         <a href="#leadership"><i class="fas fa-users"></i> Leadership</a>
@@ -41,6 +42,9 @@
         <a href="https://github.com/sunilsk17" target="_blank" class="contact-link">
           <i class="fab fa-github"></i> github.com/sunilsk17
         </a>
+        <a href="https://scholar.google.com/citations?user=nttuj54AAAAJ&amp;hl=en" target="_blank" class="contact-link">
+          <i class="fab fa-google-scholar"></i> Google Scholar
+        </a>
       </div>
 
       <div class="skills-block">
@@ -51,23 +55,26 @@
           <span>HTML/CSS</span>
         </div>
 
-        <h3>ML & Data</h3>
+        <h3>ML & Research</h3>
         <div class="tags">
-          <span>PyTorch</span><span>MLX</span><span>Scikit-learn</span>
-          <span>NumPy</span><span>Pandas</span><span>NLTK</span>
-          <span>PySpark</span>
+          <span>PyTorch</span><span>Hugging Face</span><span>MLX</span>
+          <span>Scikit-learn</span><span>LangGraph</span><span>LangChain</span>
+          <span>MCP</span><span>Knowledge Graphs</span><span>LLM Evaluation</span>
+          <span>Statistical Testing</span>
         </div>
 
-        <h3>Cloud & Data Eng</h3>
+        <h3>Backend & Data</h3>
         <div class="tags">
-          <span>GCP</span><span>Databricks</span><span>BigQuery</span>
-          <span>Azure</span><span>Apache Airflow</span><span>Apache Spark</span>
+          <span>Spring Boot</span><span>FastAPI</span><span>Next.js</span>
+          <span>REST APIs</span><span>Kafka</span><span>Spark</span>
+          <span>Airflow</span><span>Delta Lake</span><span>PostgreSQL</span>
+          <span>BigQuery</span><span>Databricks</span><span>ETL</span>
         </div>
 
-        <h3>Tools</h3>
+        <h3>Cloud & Infra</h3>
         <div class="tags">
-          <span>Git</span><span>Jupyter</span><span>Streamlit</span>
-          <span>Node.js</span>
+          <span>GCP</span><span>Azure</span><span>Kubernetes</span>
+          <span>CI/CD</span><span>System Design</span><span>Git</span>
         </div>
       </div>
     </aside>
@@ -79,12 +86,21 @@
       <section id="about" class="card">
         <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
         <p>
-          I'm a software engineer at Walmart Global Tech working on Tier-0 payment reliability and agentic AI systems.
-          Outside of work, I do ML research — mostly on hallucination detection in vision-language models, hardware-aware graph neural networks on Apple Silicon, and streaming algorithm theory.
+          I'm a Software Engineer II at Walmart Global Tech, where I own a payments-settlement pipeline that processes 25M+ transactions a day and work on reliability for Walmart's Tier-0 payments infrastructure across the US, Canada, and Mexico.
         </p>
         <p>
-          I graduated from College of Engineering Guindy (Anna University) with a BE in Computer Science (CGPA: 9.21).
-          I interned at Walmart during my final semester building data pipelines for Sam's Club, and joined full-time after graduating.
+          <strong>Research interests.</strong> I want to build AI systems that stay reliable under real-world limits: models that run on small devices with little memory or power, algorithms that stay accurate on messy, non-stationary data streams, and vision-language models that can tell when they are hallucinating.
+          Across my work, I look for an assumption that standard methods quietly rely on — uniform accuracy, benign stream order, stationary data, or a benchmark that measures the right thing — test it, and design a lightweight mechanism that holds up without it.
+          These are the directions I want to pursue in an MS in Computer Science:
+        </p>
+        <ul class="interest-list">
+          <li><strong>Trustworthy AI</strong> — hallucination detection in VLMs and LLMs, LLM evaluation, and reading model internals (hidden-state geometry) to tell when a model is wrong.</li>
+          <li><strong>Efficient &amp; edge ML</strong> — continual learning for capacity-constrained models, graph sparsification, and memory-aware training on real hardware.</li>
+          <li><strong>Streaming &amp; learning-augmented algorithms</strong> — probabilistic sketches that stay robust to stream order, and algorithms that use learned predictions without trusting them blindly.</li>
+        </ul>
+        <p>
+          I graduated from College of Engineering Guindy (Anna University) with a BE in Computer Science and Engineering (CGPA: 9.21/10).
+          I interned at Walmart in my final semester building data pipelines for Sam's Club, and joined full-time after graduating.
         </p>
       </section>
 
@@ -104,8 +120,11 @@
                 <span class="date-tag">Jul 2025 – Present · Chennai</span>
               </div>
               <ul>
-                <li>Won the Walmart EBS Elevate Global GenAI Hackathon (IDC + US); leading end-to-end development and productionization of an agentic AI platform to improve associate productivity across enterprise teams.</li>
-                <li>Reliability operations for Walmart's Tier-0 payment ecosystem — on-call support, RCA, release management, and proactive reliability engineering for payment flows across Walmart US, Canada, and Mexico.</li>
+                <li>Architected and own a production payments-settlement pipeline (Java 21 / Spring Boot) that ingests and normalizes 25M+ transactions/day across 3 sales channels and 20+ payment gateways, with zero critical incidents and 99.5% downstream fee-estimation accuracy.</li>
+                <li>Built a fee-calculation engine (15+ REST APIs) and an SAP GL-posting service that turn transaction data into revenue-critical financial records; cut failed-posting resolution time ~50% with automated Kafka-based reconciliation and enabled zero-downtime rollouts.</li>
+                <li>Own reliability for Walmart's Tier-0 payments infrastructure across the US, Canada, and Mexico during peak holiday loads (Black Friday, Cyber Monday): on-call incident response, automated failover and circuit breaking, and Splunk/Grafana/Prometheus observability under multi-thousand-TPS traffic.</li>
+                <li>Automated data-completeness monitoring and release-safety gates with contract, E2E, performance, and resiliency tests, cutting missing-feed detection from hours to minutes across 20+ providers.</li>
+                <li>Led a 5-engineer team to build SparkMind, an internal GenAI knowledge platform since onboarded by multiple engineering teams; placed top-20 among 7,000+ participants at Walmart's global hackathon and won the MADA Award.</li>
               </ul>
             </div>
           </div>
@@ -116,16 +135,15 @@
               <div class="exp-header">
                 <div>
                   <h3>Walmart Global Tech India</h3>
-                  <h4>SDE Intern</h4>
+                  <h4>Software Engineer Intern</h4>
                 </div>
-                <span class="date-tag">Jan 2025 – Jun 2025 · Bangalore</span>
+                <span class="date-tag">Jan 2025 – Jun 2025</span>
               </div>
               <ul>
-                <li>Led production cutover of Sam's Club membership data pipelines with zero downtime and full data integrity.</li>
-                <li>Built 4+ automated cross-platform backfill pipelines between GCP Databricks and BigQuery to recover missing records; integrated automated alerts and reporting.</li>
-                <li>Developed a missing data alert system to detect discrepancies between Bronze and Silver layers, enabling proactive resolution via automated team notifications.</li>
-                <li>Designed a reverse sync pipeline (GCP → Azure) using Apache Airflow and Spark — reduced sync time by 60% across 10+ high-volume tables.</li>
-                <li>Embedded data quality rules and version validation into Airflow DAGs across 10+ critical tables; created 13+ external tables in GCP Databricks avoiding duplication and cutting cloud costs.</li>
+                <li>Led the production cutover of Sam's Club membership pipelines to a cloud-native Medallion architecture (Apache Spark, GCP BigQuery, Azure Databricks) with zero downtime across 21 downstream workspaces.</li>
+                <li>Designed and deployed a proactive data-quality alert system that catches Bronze/Silver layer mismatches with root-cause-specific notifications; presented it at Sam's CDP Demo Day.</li>
+                <li>Built 4+ automated cross-cloud backfill pipelines (GCP Databricks to BigQuery) to recover missing or corrupted records, cutting mean time to detection from hours to seconds.</li>
+                <li>Designed a reverse-sync pipeline (GCP to Azure) for Delta Lake tables; restructured shuffle partitions and removed I/O bottlenecks to cut sync latency by 60% across 10+ high-volume tables.</li>
               </ul>
             </div>
           </div>
@@ -135,50 +153,62 @@
 
       <!-- Projects -->
       <section id="projects" class="card">
-        <h2 class="section-title"><i class="fas fa-code"></i> Projects</h2>
+        <h2 class="section-title"><i class="fas fa-code"></i> Research &amp; Projects</h2>
         <div class="projects-grid">
 
           <div class="project-card">
             <div class="project-header">
               <h3>LatentTokenGuard</h3>
-              <a href="https://github.com/sunilsk17/LatentTokenGuard" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/sunilsk17/LatentTokenGuard" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
-            <p class="proj-tech">Python · PyTorch · Transformers · LVLMs</p>
+            <p class="proj-tech">Position-controlled evaluation of training-free hallucination detection in VLMs · PyTorch · Hugging Face</p>
             <ul>
-              <li>Training-free object-hallucination detection for vision-language models: scores each object a caption names by the top-k cosine similarity between its hidden state and image-token states at a calibrated layer pair — single pass, no trained weights.</li>
-              <li>Found that caption position alone predicts hallucination (74–84 AUROC), so evaluated every detector within position bins on LLaVA-1.5-7B, LLaVA-1.5-13B and Qwen2.5-VL-7B (1,000 COCO captions each, cross-fitted, paired bootstrap).</li>
-              <li>Within position bins: 79.7 / 78.7 / 82.8 AUROC — best single training-free detector on all three models, +8.5 to +15.8 points when fused with token probability, level with or ahead of GLSim (NeurIPS 2025); a supervised probe overtakes it beyond ~200–400 labels.</li>
+              <li>Training-free detector that flags hallucinated objects in VLM captions from the model's own hidden states (top-k cosine between object and image tokens) — no training and no extra forward pass. Open-sourced code, 4.4 GB of features, and 41 tests.</li>
+              <li>Uncovered caption position as a hidden confound in detector evaluation (token index alone: up to 84 AUROC); built a position-controlled benchmark over 9K labelled objects from LLaVA-1.5-7B/13B and Qwen2.5-VL-7B with cross-fitting and paired bootstrap tests.</li>
+              <li>Best single training-free score on all 3 models under position control (79.7 / 78.7 / 82.8 AUROC) against 6 baselines incl. GLSim (NeurIPS 2025); adding it to token likelihood gains up to +15.8 (p&lt;0.001). Audited v1 to show POPE rewards reading the model's answer, not grounding.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Annealed EWC</h3>
+              <a href="https://github.com/sunilsk17/annealed-ewc-edge-cl" target="_blank" title="Code"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="proj-tech">Continual learning for capacity-constrained edge models · PyTorch</p>
+            <ul>
+              <li>Identified a complete-plasticity failure mode in sub-1M-parameter models under standard EWC and implemented Annealed EWC, a harmonic-decay regularization schedule backed by a PAC-Bayesian bound.</li>
+              <li>8.4% higher accuracy and 43.2% less forgetting on MobileNetV3-Small (CIFAR-10/100), with an EWC λ-sweep and LwF distillation baseline.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>TEV-STT</h3>
+              <a href="https://ieeexplore.ieee.org/document/11209591" target="_blank" title="Paper"><i class="fas fa-file-alt"></i></a>
+            </div>
+            <p class="proj-tech">Text-guided expressive video generation from facial images · Transformers · CLIP</p>
+            <ul>
+              <li>Spatio-Temporal Transformer that maps natural-language prompts to CLIP-aligned facial-landmark deformation trajectories, generating expressive, temporally coherent talking-face video from a single portrait.</li>
+              <li>Outperformed Micromotions and FaceCLIP on FVD, AKD, and CLIP Score (FVD 104, CLIP 22.6).</li>
             </ul>
           </div>
 
           <div class="project-card">
             <div class="project-header">
               <h3>mlx-spectral-gnn</h3>
-              <a href="https://github.com/sunilsk17/mlx-spectral-gnn" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/sunilsk17/mlx-spectral-gnn" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
-            <p class="proj-tech">Python · MLX · Apple Silicon</p>
+            <p class="proj-tech">Hardware-aware spectral sparsification for GNN training · MLX · Apple Silicon</p>
             <ul>
-              <li>Hardware-aware spectral graph sparsification for GNN training under memory constraints.</li>
-              <li>Prunes structurally redundant edges using spectral distances from the graph Laplacian instead of random DropEdge. Zero-copy CPU↔GPU via Apple Silicon unified memory — eliminates PCIe bottleneck.</li>
-            </ul>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>annealed-ewc-edge-cl</h3>
-              <a href="https://github.com/sunilsk17/annealed-ewc-edge-cl" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-            <p class="proj-tech">Python · PyTorch · Continual Learning</p>
-            <ul>
-              <li>Continual learning experiments on edge hardware (MobileNetV3, ResNet-18).</li>
-              <li>EWC λ-sweep across {0–5000}, annealed harmonic decay schedule, and LwF distillation baseline on sequential CIFAR-10 drift and class-incremental CIFAR-100.</li>
+              <li>Deterministic graph sparsification using Laplacian-eigenvector spectral distance in place of stochastic DropEdge, built natively in Apple MLX to exploit Apple Silicon's unified memory (zero-copy CPU↔GPU).</li>
+              <li>Preserved model accuracy at up to 30% sparsity with lower variance than stochastic baselines.</li>
             </ul>
           </div>
 
           <div class="project-card">
             <div class="project-header">
               <h3>Learning-Augmented MAXCUT Streaming</h3>
-              <a href="https://github.com/sunilsk17/Learning-Augmented-MAXCUT-Streaming" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/sunilsk17/Learning-Augmented-MAXCUT-Streaming" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
             <p class="proj-tech">Python · Streaming Algorithms · Theoretical CS</p>
             <ul>
@@ -190,7 +220,7 @@
           <div class="project-card">
             <div class="project-header">
               <h3>Stream Order Sensitivity — Distinct Element Estimation</h3>
-              <a href="https://github.com/sunilsk17/Stream-Order-Sensitivity-in-Distinct-Element-Estimation" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/sunilsk17/Stream-Order-Sensitivity-in-Distinct-Element-Estimation" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
             <p class="proj-tech">Python · HyperLogLog · Probabilistic Algorithms</p>
             <ul>
@@ -202,7 +232,7 @@
           <div class="project-card">
             <div class="project-header">
               <h3>GreenSketch</h3>
-              <a href="https://github.com/sunilsk17/GreenSketch" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/sunilsk17/GreenSketch" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
             <p class="proj-tech">Python · HyperLogLog · Edge Systems</p>
             <ul>
@@ -213,19 +243,20 @@
 
           <div class="project-card">
             <div class="project-header">
-              <h3>Phishing Detection</h3>
-              <a href="https://github.com/sunilsk17/Phishing-Detection" target="_blank"><i class="fab fa-github"></i></a>
+              <h3>Phishing URL Detection</h3>
+              <a href="https://github.com/sunilsk17/Phishing-Detection" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
-            <p class="proj-tech">Python · VAE · ResNeXt-GRU</p>
+            <p class="proj-tech">Conditional VAE + ResNeXt-GRU pipeline · PyTorch</p>
             <ul>
-              <li>Phishing URL classifier using Variational Autoencoder for data augmentation and ResNeXt-GRU architecture for classification on handcrafted URL features.</li>
+              <li>A Conditional VAE both synthesizes minority-class samples (replacing SMOTE) and compresses 48 raw features to 16 dimensions, feeding a hybrid ResNeXt-GRU classifier.</li>
+              <li>91.44% validation accuracy; cut pipeline latency and parameter count by over 60% versus prior multi-stage ensembles.</li>
             </ul>
           </div>
 
           <div class="project-card">
             <div class="project-header">
               <h3>Social Media Sentiment Analysis</h3>
-              <a href="https://github.com/sunilsk17/Social_Media_Sentiment_Analysis" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/sunilsk17/Social_Media_Sentiment_Analysis" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
             <p class="proj-tech">Python · SVM · Bagging</p>
             <ul>
@@ -237,7 +268,7 @@
           <div class="project-card">
             <div class="project-header">
               <h3>Hostel Management System</h3>
-              <a href="https://github.com/sunilsk17/Hostel-Management-System" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/sunilsk17/Hostel-Management-System" target="_blank" title="Code"><i class="fab fa-github"></i></a>
             </div>
             <p class="proj-tech">ReactJS · Node.js · MySQL</p>
             <ul>
@@ -246,6 +277,53 @@
           </div>
 
         </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="card">
+        <h2 class="section-title"><i class="fas fa-book"></i> Selected Publications</h2>
+        <ul class="pub-list">
+          <li>
+            <span class="pub-title">LatentTokenGuard: Visual Grounding &amp; Hallucination Detection in LVLMs</span>
+            <div class="pub-venue">SN Computer Science <span class="pub-status review">Under Review</span> <a href="https://github.com/sunilsk17/LatentTokenGuard" target="_blank">code</a></div>
+          </li>
+          <li>
+            <span class="pub-title">Catastrophic Rigidity in Capacity-Constrained Edge Continual Learning with Annealed EWC</span>
+            <div class="pub-venue">ACS/IEEE AICCSA 2026, UAE <span class="pub-status accepted">Accepted</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://journals.sagepub.com/doi/10.1177/1088467X261485688" target="_blank">Stream-Order Sensitivity in Distinct Element Estimation: HLL and the Shielding Effect</a>
+            <div class="pub-venue">Intelligent Data Analysis (SAGE – IOS Press) <span class="pub-status published">Journal</span></div>
+          </li>
+          <li>
+            <span class="pub-title">BeHaLLM: Benchmarking Hallucinations in LLMs — Metrics, Datasets, and Evaluation Frameworks</span>
+            <div class="pub-venue">ICT Express <span class="pub-status review">Under Review</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://ieeexplore.ieee.org/abstract/document/11590409" target="_blank">Hardware-Aware Spectral Sparsification for Efficient GNN Training under Memory Constraints</a>
+            <div class="pub-venue">ICCNCT 2026 (IEEE) <span class="pub-status published">Published</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://ieeexplore.ieee.org/document/11688312" target="_blank">Beyond Uniformity in Combinatorial Streams: Sparsity-Adaptive Oracles for MAX-CUT</a>
+            <div class="pub-venue">ICCVBIC 2026 (IEEE) <span class="pub-status published">Published</span></div>
+          </li>
+          <li>
+            <span class="pub-title">GreenSketch: Energy-Aware Order-Robust Cardinality Estimation for Sustainable Edge Analytics</span>
+            <div class="pub-venue">Journal of Engineering Research <span class="pub-status review">Under Review</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://ieeexplore.ieee.org/document/11468507" target="_blank">Dual-CVAE: Unified Data Augmentation &amp; Feature Extraction for ResNeXt-GRU Phishing Detection</a>
+            <div class="pub-venue">ICCSC 2026 (IEEE) <span class="pub-status published">Published</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://ieeexplore.ieee.org/document/11209591" target="_blank">TEV-STT: Text-Guided Expressive Video Generation from Facial Images via Spatio-Temporal Transformer</a>
+            <div class="pub-venue">ICCDS 2025 (IEEE) <span class="pub-status published">Published</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://ieeexplore.ieee.org/document/11412496" target="_blank">Human–AI Collaborative Framework for Sustainable Water Resource Management using Multi-Modal Sensing</a>
+            <div class="pub-venue">ICMCSI 2026 (IEEE) <span class="pub-status published">Published</span></div>
+          </li>
+        </ul>
       </section>
 
       <!-- Education -->
@@ -264,7 +342,7 @@
                 <span class="date-tag">Oct 2021 – May 2025</span>
               </div>
               <p>CGPA: <strong>9.21 / 10</strong></p>
-              <p>Chairperson of CSEA, Treasurer at CEG Toastmasters, Head of Events at Computer Society of Anna University.</p>
+              <p>Relevant coursework: Data Structures and Algorithms, Database Management Systems, Operating Systems, Computer Architecture, Distributed Systems, Computer Networks, Theory of Computation, Software Engineering, Machine Learning, Big Data Analytics, Cryptography and Network Security, Probability and Statistics, Discrete Mathematics, Linear Algebra.</p>
             </div>
           </div>
 
@@ -292,8 +370,41 @@
           <li>
             <span class="ach-badge">🥇</span>
             <div>
-              <strong>Walmart EBS Elevate Global GenAI Hackathon</strong>
-              <p>Won the global GenAI hackathon across IDC + US teams at Walmart. Now leading productionization of the winning agentic AI platform.</p>
+              <strong>1st Place — Walmart EBS Elevate Global GenAI Hackathon (2025)</strong>
+              <p>Won the global GenAI hackathon across IDC + US teams at Walmart.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">🏆</span>
+            <div>
+              <strong>Walmart Impact Award (2025)</strong>
+              <p>The highest individual associate honor at Walmart.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">🏅</span>
+            <div>
+              <strong>2× Walmart MADA / Bravo Award Winner (2025 – 2026)</strong>
+              <p>Recognized for engineering contributions to payments stability and developer productivity.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">⭐</span>
+            <div>
+              <strong>Walmart Employee of the Month (May 2026)</strong>
+              <p>For end-to-end ownership and production impact of Normalizer, a payment-settlement pipeline processing 25M+ transactions/day.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">🌍</span>
+            <div>
+              <strong>11th Global Finalist — Walmart Global Tech "Everybody Hacks" (2026)</strong>
+            </div>
+          </li>
+          <li>
+            <span class="ach-badge">🏅</span>
+            <div>
+              <strong>Top 25 — Walmart US Omni Tech Hackathon (2026)</strong>
             </div>
           </li>
           <li>
@@ -336,10 +447,61 @@
                 <span class="date-tag">Jul 2024 – Jun 2025</span>
               </div>
               <ul>
-                <li>Led 800+ students as head of the CSE department's official student body at CEG.</li>
-                <li>Organized HackZ'24, a 24-hour national hackathon with 3500+ participants.</li>
-                <li>Managed an 80+ member team across logistics, tech, content, and sponsorship; secured industry partnerships.</li>
-                <li>Orchestrated ABACUS'25 (national symposium), Freshers' Day, Alumni Meet, and Induction Program.</li>
+                <li>Led the CSE department's 800+ member student body and an 80+ member executive committee.</li>
+                <li>Ran Abacus'25 (3,500+ participants) and a 24-hour national hackathon spanning 473+ colleges and 20+ states.</li>
+                <li>Managed all CSEA financial activity, including sponsorships and budgeting, and made final calls across logistics, tech, and content.</li>
+                <li>Also organized Freshers' Day, the Alumni Meet, and the Induction Program.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>National Service Scheme (NSS)</h3>
+                  <h4>Community Outreach &amp; Rural Development Organizer</h4>
+                </div>
+                <span class="date-tag">Oct 2021 – May 2025</span>
+              </div>
+              <ul>
+                <li>Coordinated residential rural-development camps, setting up libraries in rural government schools and giving STEM career guidance to village students.</li>
+                <li>Led sustainability initiatives including organic farming drives, tree plantations, and community cleanup projects.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>IEEE WIECON</h3>
+                  <h4>Lead Student Organizer</h4>
+                </div>
+                <span class="date-tag">Dec 2024</span>
+              </div>
+              <ul>
+                <li>Led student volunteer teams through end-to-end operations for a 3-day international academic conference, coordinating VIP guests and multi-track presentation logistics.</li>
+                <li>Owned the technical program: presentations, technical sessions, and hands-on workshops across all three days.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <div>
+                  <h3>Computer Science and Engineering Association (CSEA)</h3>
+                  <h4>Joint Secretary – Industrial Relations</h4>
+                </div>
+                <span class="date-tag">Sep 2023 – Jul 2024</span>
+              </div>
+              <ul>
+                <li>Negotiated multi-year industry partnerships and wrote sponsorship decks, securing a 250% year-over-year sponsorship increase for Abacus'24 and Reach'24.</li>
+                <li>Visited 20+ engineering colleges across Chennai for outreach, generating 2,000+ registrations and a 175% participation surge within 48 hours.</li>
               </ul>
             </div>
           </div>
@@ -350,13 +512,13 @@
               <div class="exp-header">
                 <div>
                   <h3>CEG Toastmasters</h3>
-                  <h4>Treasurer & Vice President Membership</h4>
+                  <h4>Treasurer &amp; Vice President Membership</h4>
                 </div>
                 <span class="date-tag">Mar 2023 – Jun 2024</span>
               </div>
               <ul>
-                <li>Managed international payments to Toastmasters International via wire transfers.</li>
-                <li>Led member engagement initiatives and streamlined club operations.</li>
+                <li>Managed international wire transfers to Toastmasters HQ as Treasurer, keeping financial governance compliant.</li>
+                <li>Led member engagement and recruitment drives and ran speech-evaluation sessions as VP Membership.</li>
               </ul>
             </div>
           </div>
@@ -367,13 +529,13 @@
               <div class="exp-header">
                 <div>
                   <h3>Computer Society of Anna University</h3>
-                  <h4>Head of Events</h4>
+                  <h4>Deputy Head &amp; Head of Events</h4>
                 </div>
-                <span class="date-tag">Sep 2023 – Aug 2024</span>
+                <span class="date-tag">Sep 2023 – May 2024</span>
               </div>
               <ul>
-                <li>Conducted DSA and C++ programming classes for non-CS/IT students.</li>
-                <li>Organized technical events during intra-college symposiums.</li>
+                <li>Designed and ran DSA and C++ bootcamps for non-CS engineering students; taught evening CS classes and first-year lab sessions for juniors.</li>
+                <li>Directed competitive coding contests, hackathons, and technical events across university-wide symposiums.</li>
               </ul>
             </div>
           </div>
