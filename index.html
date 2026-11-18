@@ -66,9 +66,6 @@
     I'm a software engineer at Walmart Global Tech, where I build and run the backend systems that process Walmart's payment settlement transactions. Day to day that means backend infrastructure and payments reliability, and I also develop GenAI and agentic AI systems.
     Outside work I do machine learning research, mostly on two questions: how to tell when a model's output can be trusted, and how to make learning work when memory and energy are tight.
   </p>
-  <p>
-    I graduated from the College of Engineering Guindy, Anna University, in 2025 with a B.E. in Computer Science and Engineering.
-  </p>
   </section>
 
   <section id="research" class="row">
@@ -80,16 +77,13 @@
       </ul>
     </div>
     <p class="lede">
-      Most of my projects start with an assumption that a standard method quietly depends on, and ask what happens when it does not hold.
-      A hallucination benchmark can reward a detector for reading the model's answer instead of looking at the image.
-      A HyperLogLog sketch can need far more data when a stream arrives in its natural order rather than shuffled.
-      A regularizer that works for large networks can break down in a model with under a million parameters.
-      I like finding these cases, measuring them carefully, and building something small that holds up without the assumption.
+      Most of my projects start with an assumption that a standard method quietly depends on.
+      I test what happens when it fails, then build something small that holds up without it: a hallucination detector that is judged fairly, a sketch that is robust to stream order, a regularizer that still works on tiny models.
     </p>
     <ul class="areas">
-      <li><strong>Trustworthy ML.</strong> Detecting hallucinations in vision-language and language models, and evaluating detectors so that a good score means what it seems to mean.</li>
-      <li><strong>Efficient and edge ML.</strong> Continual learning for small models, graph sparsification, and training that respects the memory of the device it runs on.</li>
-      <li><strong>Streaming and learning-augmented algorithms.</strong> Sketches that are robust to stream order, and algorithms that use learned predictions without trusting them blindly.</li>
+      <li><strong>Trustworthy ML.</strong> Hallucination detection in vision-language models and LLMs, and evaluations that measure what they claim to.</li>
+      <li><strong>Efficient and edge ML.</strong> Continual learning and graph sparsification for memory-limited hardware.</li>
+      <li><strong>Streaming and learning-augmented algorithms.</strong> Order-robust sketches, and algorithms that use learned predictions without trusting them blindly.</li>
     </ul>
   </section>
 
@@ -104,10 +98,9 @@
     </div>
     <h3>When does a VLM's hidden state know an object isn't there?</h3>
     <p>
-      LatentTokenGuard scores each object a vision-language model names in a caption by how closely the object word's hidden state matches the image tokens, with no training and no extra forward pass.
-      My first version looked strong on POPE, until I checked and found the score was mostly reading the model's own yes/no answer.
-      So I rebuilt the evaluation on free-form captions from three models, 1,000 COCO images each.
-      Objects named late in a caption are hallucinated far more often, so token position alone reaches up to 84 AUROC, and every detector here is compared within position bins.
+      LatentTokenGuard flags objects a vision-language model names but cannot see, using only its own hidden states: no training and no extra forward pass.
+      My first version looked strong on POPE, until I found it was mostly reading the model's yes/no answer, so I rebuilt the evaluation on free-form captions from three models.
+      Objects named late in a caption are hallucinated far more often, so every detector here is compared within position bins.
     </p>
 
     <figure>
@@ -175,9 +168,7 @@
     </figure>
 
     <p>
-      Under that control, LatentTokenGuard is the strongest single training-free detector on all three models.
-      Adding it to token likelihood gains 8.5 to 15.8 points, and it is level with or ahead of GLSim (NeurIPS 2025).
-      A trained linear probe overtakes it once more than about 200 to 400 labelled objects are available, and I report that too.
+      Under that control it is the best single training-free detector on all three models, and level with or ahead of GLSim (NeurIPS 2025). A trained probe overtakes it once a few hundred labelled objects are available.
     </p>
     <p class="more">
       <a href="https://github.com/sunilsk17/LatentTokenGuard">code</a>
@@ -193,8 +184,6 @@
       <li><span class="when">Sep 2026</span><span>Our paper on stream order and HyperLogLog is out in <em>Intelligent Data Analysis</em>.</span></li>
       <li><span class="when">Aug 2026</span><span>Presented our learning-augmented streaming MAX-CUT paper at ICCVBIC 2026 in Lalitpur, Nepal.</span></li>
       <li><span class="when">May 2026</span><span>Presented spectral sparsification for GNN training in Apple MLX at ICCNCT 2026.</span></li>
-      <li><span class="when">Jul 2025</span><span>Joined Walmart Global Tech as a Software Engineer II.</span></li>
-      <li><span class="when">May 2025</span><span>Graduated from the College of Engineering Guindy.</span></li>
     </ul>
   </section>
 
@@ -209,7 +198,7 @@
 
     <p class="pubgroup">Featured</p>
     <ul class="pubs">
-      <li>
+      <li class="keep-open">
         <span class="title">LatentTokenGuard: Position-Controlled Evaluation of Training-Free Object Hallucination Detection in Vision-Language Models</span>
         <span class="authors"><strong>Sunil Kumar S</strong></span>
         <span class="venue">Manuscript, 2026. An earlier version is under review at <em>SN Computer Science</em>.</span>
@@ -237,34 +226,34 @@
       <li>
         <a class="title" href="https://doi.org/10.1109/iccvbic71195.2026.11688312">Beyond Uniformity in Combinatorial Streams: Sparsity-Adaptive and Adversarially Robust Oracles for MAX-CUT Approximation</a>
         <span class="authors"><strong>Sunil Kumar S</strong>, Matan P, Krithikha Sanju S, M. Gokuldhev, Daphne S., S. Samson Geoffrey</span>
-        <span class="venue"><em>International Conference on Computational Vision and Bio Inspired Computing (ICCVBIC)</em>, Lalitpur, Nepal, 2026</span>
+        <span class="venue"><em>International Conference on Computational Vision and Bio Inspired Computing (ICCVBIC)</em>, 2026</span>
         <span class="tldr">Streaming MAX-CUT algorithms that use learned predictions but fall back when those predictions look unreliable; tested on Enron mail and Ottawa road graphs.</span>
         <span class="plinks"><a href="https://doi.org/10.1109/iccvbic71195.2026.11688312">paper</a><a href="https://github.com/sunilsk17/Learning-Augmented-MAXCUT-Streaming">code</a></span>
       </li>
       <li>
         <a class="title" href="https://doi.org/10.1109/iccnct68477.2026.11590409">Hardware-Aware Spectral Sparsification for Efficient GNN Training under Memory Constraints</a>
         <span class="authors"><strong>Sunil Kumar S</strong>, P. Mohamed Fathimal, Poonkodi M</span>
-        <span class="venue"><em>International Conference on Computer Networks and Inventive Communication Technologies (ICCNCT)</em>, Erode, India, 2026</span>
+        <span class="venue"><em>International Conference on Computer Networks and Inventive Communication Technologies (ICCNCT)</em>, 2026</span>
         <span class="tldr">Deterministic spectral edge pruning, written in Apple MLX, stays within 2–3 points of the full graph at 30% sparsity on Cora and Citeseer, with lower variance than DropEdge.</span>
         <span class="plinks"><a href="https://doi.org/10.1109/iccnct68477.2026.11590409">paper</a><a href="https://github.com/sunilsk17/mlx-spectral-gnn">code</a></span>
       </li>
       <li>
         <a class="title" href="https://doi.org/10.1109/iccsc67078.2026.11468507">Dual-CVAE: Unified Data Augmentation and Feature Extraction for ResNeXt-GRU Phishing Detection</a>
         <span class="authors"><strong>Sunil Kumar S</strong>, Nikhil Prasanna A, Parthiban R, P. Shanthi, E. Shanmuga Priya</span>
-        <span class="venue"><em>International Conference on Computing, Sciences and Communications (ICCSC)</em>, Ghaziabad, India, 2026</span>
+        <span class="venue"><em>International Conference on Computing, Sciences and Communications (ICCSC)</em>, 2026</span>
         <span class="tldr">One conditional VAE both augments the minority class and compresses features for a ResNeXt-GRU classifier, reaching 91.44% validation accuracy.</span>
         <span class="plinks"><a href="https://doi.org/10.1109/iccsc67078.2026.11468507">paper</a><a href="https://github.com/sunilsk17/Phishing-Detection">code</a></span>
       </li>
       <li>
         <a class="title" href="https://doi.org/10.1109/icmcsi67283.2026.11412496">A Human–AI Collaborative Framework for Sustainable Water Resource Management Using Multi-Modal Sensing and Explainable Deep Learning</a>
         <span class="authors">Ajai Krishna T S, <strong>Sunil Kumar S</strong>, Adithyaa V S</span>
-        <span class="venue"><em>International Conference on Mobile Computing and Sustainable Informatics (ICMCSI)</em>, Purbanchal University, Nepal, 2026</span>
+        <span class="venue"><em>International Conference on Mobile Computing and Sustainable Informatics (ICMCSI)</em>, 2026</span>
         <span class="plinks"><a href="https://doi.org/10.1109/icmcsi67283.2026.11412496">paper</a></span>
       </li>
       <li>
         <a class="title" href="https://doi.org/10.1109/iccds64403.2025.11209591">TEV-STT: Text-Guided Expressive Video Generation from Facial Images via Spatio-Temporal Transformer</a>
         <span class="authors">Nikhil Prasanna A, Parthiban R, <strong>Sunil Kumar S</strong>, S. Chitrakala</span>
-        <span class="venue"><em>International Conference on Computing and Data Science (ICCDS)</em>, Chennai, India, 2025</span>
+        <span class="venue"><em>International Conference on Computing and Data Science (ICCDS)</em>, 2025</span>
         <span class="plinks"><a href="https://doi.org/10.1109/iccds64403.2025.11209591">paper</a></span>
       </li>
     </ul>
@@ -292,7 +281,7 @@
     <h2>Experience</h2>
     <div class="entry">
       <div class="entry-head"><span><strong>Walmart Global Tech</strong>, Software Engineer II</span><span class="when">2025 – now</span></div>
-      <p>I own a payments-settlement pipeline that normalizes more than 25 million transactions a day across 20+ payment gateways, and I'm on call for Walmart's Tier-0 payment systems in the US, Canada and Mexico. I also led a five-person team that built SparkMind, a knowledge-graph memory layer for AI agents that several engineering teams now use.</p>
+      <p>I own a payments-settlement pipeline handling 25M+ transactions a day across 20+ gateways, and I'm on call for Tier-0 payment systems in the US, Canada and Mexico. I also led the five-person team behind SparkMind, a knowledge-graph memory layer for AI agents now used by several teams.</p>
     </div>
     <div class="entry">
       <div class="entry-head"><span><strong>Walmart Global Tech</strong>, Software Engineer Intern</span><span class="when">Jan – Jun 2025</span></div>
@@ -307,8 +296,8 @@
   <section id="service" class="row">
     <h2>Teaching, talks and service</h2>
     <ul class="plain">
-      <li>Invited resource person and judge, Code Premier League coding contest, School of Computing, Vel Tech Rangarajan Dr. Sagunthala R&amp;D Institute of Science and Technology, Chennai (Oct 2026).</li>
-      <li>Taught evening computer science classes and first-year lab sessions, and ran DSA and C++ bootcamps for students outside CS (Computer Society of Anna University, 2023–24).</li>
+      <li>Invited resource person and judge, coding contest at Vel Tech's School of Computing, Chennai (Oct 2026).</li>
+      <li>Taught evening CS classes and first-year labs, and ran DSA and C++ bootcamps for non-CS students (2023–24).</li>
       <li>Chairperson, Computer Science and Engineering Association, CEG (2024–25). Led the department's 800+ member student body, its national hackathon HackZ'24 and the Abacus'25 symposium.</li>
       <li>Lead student organizer, IEEE WIECON (Dec 2024), responsible for the technical program across three days.</li>
       <li>Volunteer with the National Service Scheme (2021–25), setting up libraries in rural government schools.</li>
@@ -348,11 +337,11 @@
       </svg>
     </figure>
     <p>
-      Away from the screen, I'm happiest in the mountains. I keep going back to the Western Ghats in the monsoon, when trails like Kudremukh and Kodachadri disappear into cloud and every stream is running. I love the early, wet starts and the stillness near a summit that makes the whole climb worth it.
-      I travel slowly when I can, to wander more than to sightsee: meeting people along the way, eating what the locals eat, and picking up a little of how life works somewhere new.
-      My favourite trips are the ones where the best part turns out to be a person I met on the way.
+      Away from the screen I'm happiest in the mountains, especially the Western Ghats in the monsoon, when trails like Kudremukh and Kodachadri disappear into cloud.
+      I travel slowly when I can: meeting people, eating what the locals eat, and seeing how life works somewhere new.
     </p>
     <figure class="gallery">
+      <div class="gallery-rows">
       <div class="gallery-row">
         <img src="ghats-1.jpg" style="--r:1.3333" width="1200" height="900" loading="lazy" alt="Cloud resting on green grassland ridges in the Western Ghats">
         <img src="ghats-4.jpg" style="--r:0.75" width="960" height="1280" loading="lazy" alt="A grassy summit under a wide sky, with cloud filling the valleys below">
@@ -360,6 +349,7 @@
       <div class="gallery-row">
         <img src="ghats-2.jpg" style="--r:0.75" width="960" height="1280" loading="lazy" alt="A grassy peak with cloud spilling over the ridge behind it">
         <img src="ghats-3.jpg" style="--r:0.75" width="960" height="1280" loading="lazy" alt="Rolling grassland and dark shola forest under low monsoon cloud">
+      </div>
       </div>
       <figcaption>The Western Ghats in the monsoon. Select a photo to see it larger.</figcaption>
     </figure>
@@ -375,6 +365,25 @@
 </dialog>
 
 <script>
+  // Publication summaries start folded behind a small toggle (visible without JS)
+  document.querySelectorAll('.pubs li:not(.keep-open)').forEach(li => {
+    const t = li.querySelector('.tldr');
+    if (!t) return;
+    let links = li.querySelector('.plinks');
+    if (!links) { links = document.createElement('span'); links.className = 'plinks'; li.appendChild(links); }
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'fold'; b.textContent = 'summary';
+    b.setAttribute('aria-expanded', 'false');
+    b.addEventListener('click', () => {
+      t.hidden = !t.hidden;
+      b.setAttribute('aria-expanded', String(!t.hidden));
+      b.textContent = t.hidden ? 'summary' : 'hide summary';
+    });
+    links.appendChild(b);
+    links.after(t);
+    t.hidden = true;
+  });
+
   // Open gallery photos full-size; click anywhere or press Esc to close
   const box = document.querySelector('.lightbox');
   const big = box.querySelector('img');

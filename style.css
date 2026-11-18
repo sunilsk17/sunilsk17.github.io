@@ -187,7 +187,7 @@ strong { font-weight: 600; }
 }
 
 /* ── Sections ── */
-section { margin-top: 3.5rem; scroll-margin-top: 2rem; }
+section { margin-top: 2.9rem; scroll-margin-top: 2rem; }
 
 /* ── Away from work ── */
 .ridge {
@@ -210,7 +210,8 @@ figure.gallery {
 }
 /* Each photo grows in proportion to its aspect ratio, so a row shares one
    height and every image is shown whole, never cropped. */
-.gallery-row { display: flex; gap: 0.6rem; margin-bottom: 0.6rem; }
+.gallery-rows { display: flex; gap: 0.6rem; margin-bottom: 0.6rem; }
+.gallery-row { display: contents; }
 .gallery-row img {
   flex: var(--r) 1 0;
   width: 0;
@@ -371,7 +372,7 @@ figcaption b { color: var(--ink-soft); font-weight: 600; }
   padding: 0;
   margin: 0;
 }
-.pubs li { margin-bottom: 1.4rem; }
+.pubs li { margin-bottom: 1.1rem; }
 
 .title {
   display: block;
@@ -410,6 +411,20 @@ a.title:hover { color: var(--accent); }
   margin-top: 0.25rem;
 }
 .plinks a { margin-right: 0.9rem; }
+.plinks .fold {
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 0.18em;
+}
+.plinks .fold:hover { text-decoration-color: currentColor; }
+.plinks + .tldr { margin-top: 0.3rem; }
+.tldr[hidden] { display: none; }
 
 .note { font-size: 0.92rem; color: var(--muted); }
 
@@ -493,7 +508,8 @@ footer {
   .intro h1 { font-size: 2rem; }
   .intro .aside dl { grid-template-columns: minmax(0, 1fr); }
   figure.gallery { margin-left: 0; margin-right: 0; padding: 0; }
-  .gallery-row { gap: 0.4rem; margin-bottom: 0.4rem; }
+  .gallery-rows { display: block; margin-bottom: 0; }
+  .gallery-row { display: flex; gap: 0.4rem; margin-bottom: 0.4rem; }
   .news li { grid-template-columns: 1fr; gap: 0; margin-bottom: 0.9rem; }
   .when { padding-top: 0; }
   figure { padding: 1rem 0.75rem 0.75rem; margin-left: -0.25rem; margin-right: -0.25rem; }
